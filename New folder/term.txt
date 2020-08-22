@@ -1,0 +1,836 @@
+x<-1:5
+y<-6:10
+z<-11:15
+ls()
+sum(x,y,z)
+plot(x,y)
+rm(f, m, z)
+BOD
+date()
+log(x)
+#natural logarithm
+log2(x)
+exp(x)
+sin((90)*(pi/180))
+cos((0)*(pi/180))
+x1;x2
+#multiple statment
+round(68/3,10)
+
+x1=c(1,3,5,7,9)
+gender=c("male", "female")
+2:7
+seq(from=1, to=50, by=10)
+seq(from=0, to=50, by=10)
+rep(1,times=10)
+x2=rep(1,times=10)
+x3=rep("Naimul", times=5)
+rep(1:3, times=4)
+rep(seq(from=2,to=7,by=0.25), times=3)
+#if two vectors are of the same length, we may add/subtract/mult/div
+#corresponding elements
+x1[3]
+x1[-3]
+x[1:3]
+x[c(1,5)]
+x[-c(1,3)]
+x[x>3]
+matrix(c(1:9), nrow = 3, byrow = TRUE)
+matrix(c(1:9), nrow = 3, byrow = FALSE)
+mat<-matrix(c(1:9), nrow = 3, byrow = TRUE)
+matrix(c(1:9), nrow = 3)
+
+mat[1,2]
+mat[c(1,3),2]
+mat[2,]
+mat*100
+help("read.csv")
+data1 <- read.csv(file.choose(), header = T)
+data2 <- read.table(file.choose(), header = T, sep=",")
+#data1 & data2 are same(basically for comma seperated csv files) 
+data3 <- read.delim(file.choose(), header = T)
+data4 <- read.table(file.choose(), header = T, sep="\t")
+#data3 & data4 are same(basically for tab delimineted txt files)
+data3 <- read.table(file="E:/hs0.csv", header = T, sep=",")
+rm(data3)
+dim(data1)
+head(data1)
+#first 6 data list
+tail(data1)
+#last 6 data list
+names(data1)
+data1$read
+mean(data1$read)
+attach(data1)
+#Should not have any collapsing element on the environment
+read
+mean(read)
+detach(data1) 
+#by attach(starts manipulation) and detach(finishes manipulation) command we can easily manipulate the variables as separate arrays
+class(gender)
+levels(prgtype)
+summary(data1)
+z<- c(0,1,1,1,0,0,0,0,0,0)
+z<- as.factor(z)
+#to make that variable a factor variable
+science[20:38]
+science[37]
+data1[20:38, ]
+mean(write[gender==1])
+fdata <-data1[gender==0, ]
+mdata <-data1[gender==1, ]
+gender<-as.factor(gender)
+summary(gender)
+MaleOver15W <-data1[gender==1 & write>55, ]
+#Multiple condition adding...
+MaleOver15W[1:4, ]
+set.seed(1234)
+n<- 10000
+x<-runif(n)
+y<-runif(n)
+mpi10<-4*sum(x^2+y^2<=1)/10000
+ave(mpi:mpi9) -> averaged_pi
+you<-10000
+for(i in 1:you){
+  n<- 10000
+  x<- runif(n)
+  y<- runif(n)
+  print(i<-c(nai[i]<-4*sum(x^2+y^2<=1)/10000))}
+new_pi<-ave(nai)
+nai<-c(1:10)
+new_pi[1]
+for(i in 1:you){
+  n<- 10000
+  x<- runif(n)
+  y<- runif(n)
+  i<-c(nai[i]<-4*sum(x^2+y^2<=1)/10000)}
+
+fix(x)
+#for renaming the variable
+student<-data.frame(regN,dept,age)
+names(student)<-c("regN","dept","age")
+
+barplot(percent, main="TITLE",xlab = "Gender",ylab = "%",las=1, names.arg = c("Female","Male"))
+
+barplot(percent, main="TITLE",ylab = "Gender",xlab = "%",las=1, names.arg = c("Female","Male"), horiz = T)
+
+pie(count, main="TITLE")
+
+boxplot(LungCap, main="TiTLE", ylab="Lung Capacity", ylim=c(0,16), las=1)
+
+boxplot(LungCap~Gender, main="TiTLE", ylab="Lung Capacity", ylim=c(0,16), las=1)
+
+
+
+mat1<-matrix(c(1:6),2,3)
+#row,coloumn
+
+xxy<-scan()
+#for continue reading data
+plot(age,regN)
+summary(x)
+#min, 1st quartile,median,mean,3rd quartile,max
+plot(x,y)
+hist(x)
+hs=hist(x)
+boxplot(x)
+factorial(88)
+gamma(5)
+beta(2,3)
+round(2.332356,3)
+abs(18/-12)
+# R is object-oriented programming language. 
+# Output of a function is an object.
+# It can be used as input of another 
+# function.
+class(b)
+#datatype or type
+class(log)
+floor(x)
+ceiling(x)
+round(x)
+sort(age)
+sort(age,T)
+#sort(age, decreasing=T)
+y[3]=8
+#element wise replacement in vector
+length(y)
+sum(x)
+mean(x)
+var(x)
+sd(x)
+sum(x^3)
+mean((x-mean(x))^4)
+age_reg=c(regN,age)
+age1=(age>23)
+#boolean type creates
+sum(age>23)
+#counting, not summation
+which(age>23)
+#index checking
+v2 = (u > 2 & u <= 3)
+v3 = (u < 2 | u == 3)
+v4 = (u != 2)
+u[u < 1 | u > 2] = 0
+#Entering value condition wise
+age[age<24]
+#c1=scan(,"character") best option for character insertion
+dept_factor<-factor(dept)
+class(dept_factor)
+# Factors
+# For using in ANOVA etc., we can convert 
+# character or numeric vectors into factors
+c2=rep(0:2,each=10)
+#for each individual repetition
+ageW=ifelse(age<24,1,0)
+#boolean conversion by prefferable digit
+w=rep(1,length(age))
+w = cut(u, breaks=c(10, 11.6, 12.5, 13), labels=c(0,1,2))
+w = cut(u, c(10, 11.6, 12.5, 13), c(0,1,2))
+#labeling in different points
+w = as.numeric(w)-1
+# Here, w has become a factor
+# If you want numerical vector, use 
+
+nn = 1
+for (i in 1:100)
+{
+  nn = nn + 1
+  if (factorial(nn) > 987654)
+    break
+}
+nn
+#use of for loop
+
+# NA means missing values in R
+# "NA" means a character (or name).
+# NaN means "Not a number" (0/0).
+
+Y1 = matrix(c(1:19, 23), 4)
+Y1 = matrix(c(1:19, 23), 4,byrow = T)
+#here 4 means row number
+#byrow true means row wise distribution
+matrix(1,10,5)
+# 10x5 matrix of ones
+matrix(0,10,5)
+# 10x5 matrix of zeros
+diag(10)
+#identity matrix
+diag(1:5)
+#diagonal elements are 1 to 5
+diag(c(2,5,8,9))
+#matrix(,5,4)
+t(Y1)
+#transpose
+Y1^-1
+#inverse
+W<- t(Y1)%*% Y1
+#matrix multiplication
+y1<-matrix(c(1:4),2,2)
+W<-(y1)^-1%*%y1
+A1<-matrix(1:20,5,4)
+A2<-matrix(1,5,3)
+print(A<-cbind(A2,A1))
+#cbind is used for combining matrixes horizontally
+AB<-rbind(A,B)
+#rbind is used for combining matrixes vertically
+
+
+x
+
+bilas <- 50
+
+for(i in 1:1){
+if(bilas < 0) 
+{print("Negative")}
+else if (bilas == 50)
+{print("its ok")}
+else
+{print("nothing")}
+}
+Xx = array(1:90, c(5, 6, 3))
+#Higher Dimensional Arrays Like 2 or three dimensional
+dim(Xx)
+X~binomial(10,3)
+dbinom(2,10,0.3)
+#P(X=2)
+pbinom(3,10,0.3)
+#P(X<=3)
+pbinom(2,10,0.3)
+#P(X<3)
+1-pbinom(4,10,0.3)
+#P(X>4)
+qbinom(0.5, 10, 0.3)  
+# Binomial Example2 : X ~ binomial(10, 0.3)
+# Find value k such that P(X <= k) = 0.5 
+
+gender<-c(rep("Female",20),rep("Male",20))
+gender<-rep(c("Female","Male"),20)
+gender<-as.factor(gender)
+gender2<-ordered(gender)
+summary(gender)
+data(iris)
+dt1<-iris
+head(dt1)
+tail(dt1)
+dt1[51:55,]
+dt1[51:55,4]
+dt1[51:55,3:4]
+edit(dt1)
+fix(dt1)
+dt1<-dt1[,1:4]
+summary(dt1)
+m<-sapply(dt1,mean)
+s<-sapply(dt1,sd)
+#sapply is used for data.farmes
+cv<-s/m*100
+zsl<-(dt1[,1]-m[1])/s[1]
+zsw<-(dt1[,2]-m[2])/s[2]
+m1<-matrix(c(1:16),4,4)
+dim(m1)
+m1
+#standardized
+mean(zsl)
+sd(zsl)
+sd(zsw)
+mean(zsl^3)
+#skewness of 1st variable
+mean(zsl^4)
+#kurtosis
+write.table(iris,"g:/iris.txt",sep=",")
+datai<-read.table("g:/iris.txt",header = T,sep = ",")
+fix(datai)
+savehistory("location/jhk.txt")
+loadhistory("location/jhk.txt")
+a<-cov(dt1)*149#product matrix,except 149 covariance matrix
+b<-solve(a)#inverse matrix
+det(a)
+t(a)
+ad<-diag(a)#trace
+c<-cor(a)
+
+
+a<-cov(dt1)
+#positive, semi or full definite matrix, symetric or square matrix
+a1<-149*a
+b<-solve(a1)
+det(a1)
+t()
+ad<-diag(a1)
+#diagonal element er srt & inverse korte hobe
+ad<sqrt(ad)
+adhi<-1/ad
+#R= D^-1/2 *S* D^-1/2
+c<-cor(dt1)
+e<-eigen(b)
+prod(e$values)
+det(b)
+sum(e$values)
+sum(diag(b))
+dh<-sqrt(sv$d)
+sv<-sh$u %*% diag(sh$d^2) %*% t(sh$v)
+#Product of eigen value is the determinant of a matrix
+#Sum of eigen value is the trace of a matrix
+sh<-svd(b)#singular value dicomposition of not symetric. A=U' ^ V
+sv#square matrix
+sv-a%*%a
+sr<-sh$u %*% diag(sh$d^.5) %*% t(sh$v)
+sr#square root matrix
+sr%*%sr
+a
+##REgression
+sl1<-c(dt1$sl)
+sw1<-c(dt1$sw)
+pl1<-c(dt1$pl)
+pw1<-c(dt1$pw)
+Regression_iris<-lm(sl1~sw1+pl1+pw1)
+Regression_iris1<-lm(sl1~sw1+pl1+pw1+pw1:sw1)
+
+summary(Regression_iris)
+
+pairs(dt1)
+FF<-matrix(c((rep(1,each=150)),sw1,pl1,pw1),150,4)
+FN<-matrix(c(sl1),150,1)
+print(beta_1<-(solve(t(FF)%*%FF))%*%(t(FF)%*%FN))
+
+FF<-matrix(c((sw1-mean(sw1)),(pl1-mean(pl1)),(pw1-mean(pw1))),150,3)
+FN<-matrix(c(sl1-mean(sl1)),150,1)
+print(beta_1<-(solve(t(FF)%*%FF))%*%(t(FF)%*%FN))
+
+
+
+for(i in c(2,4,7,9))
+  print(i^2)
+#can insert individual values
+for(i in c(2,4,7,9)){
+     j<-i^2
+     k<-i^3
+     print(c(i,j,k))
+}
+for(i in c(2,4,7,9)){
+  j<-i^2
+  k<-i^3
+  print(list(i,j,k))
+}
+data(iris)
+iris[!complete.cases(iris)]
+#For Checking missing ones
+x<-rnorm(10)
+y<-rnorm(10)
+xy<-data.frame(x,y)
+xy[5,1]<-NA
+xy[!complete.cases(xy),]
+meansd<-function(x)
+{
+  m<-mean(x)
+  s<-sd(x)
+  #print(list(m,s))
+  r<-list("Mean"=m,"SD"=s)
+  #return(r) can be used to display
+  #or, print(r)
+}
+
+print(meansd(dt1$sl))
+
+fix(meansd)
+
+meansd(iris[,1])
+setwd("location")
+getwd()
+installed.packages()
+install.packages("epiR")
+install.packages("psych")
+install.packages("rattle")
+library(psych)
+library(rattle)
+help(package=epiR)
+install.packages()
+
+data1<-data.frame(iris)
+data1
+data1<-data1[which(data1$Species=="setosa"|data1$Species=="versicolor"),]
+#specific collection
+t.test(data1$Sepal.Length~data1$Species)
+#for unequal variance t-test
+t.test(data1$Sepal.Length~data1$Species,var.equal=T)
+t.test(data1$Sepal.Length~data1$Species,var.equal=T, alternative="less")
+t.test(data1$Sepal.Length~data1$Species,var.equal=T,alternative="greater")
+#for equal variance t-test
+t.test(data1$Sepal.Length)
+#single mean test by default 0
+t.test(data1$Sepal.Length,mu=5)
+#single mean test by mean 5
+t.test(Sepal.Length,mu=5,data=data1)
+t.test(data1$Sepal.Length,data1$Sepal.Width,paired=T)
+#paired t-test
+t.test(data1$Sepal.Length,data1$Sepal.Width,var.equal = T)
+#Two sample t test
+var.test(data1$Sepal.Length,data1$Sepal.Width)
+#F test to compare two variances
+var.test(data1$Sepal.Length,data1$Sepal.Width,alternative = "greater")
+var.test(data1$Sepal.Length,data1$Sepal.Width,alternative = "less")
+x<-seq(-3,3,.1)
+y<-dnorm(x)
+plot(x,y,type = "l")
+plot(x,y)
+qnorm(.95)
+#normal table
+qnorm(.95, lower.tail = F)
+#normal table right tail
+pnorm(1.96,lower.tail = F)
+#probabilty
+mad(data1$Sepal.Length,center = median(data1$Sepal.Length))
+#Mean absolute deviation by default median theke deviation
+mad(data1$Sepal.Length,center = mean(data1$Sepal.Length))
+mad(data1$Sepal.Length)
+library(psyche)
+library("MASS", lib.loc="C:/Program Files/R/R-3.3.2/library")
+describe(data1$Sepal.Length)
+describe.by(data1$Sepal.Length)
+describe.by(data1$Sepal.Length,group = data1$Species)
+describe.by(data1$Sepal.Length,group = data1$Sepal.Length<=5.0)
+describeBy(data1$Sepal.Length,data1$Species)
+print(xy<-describe.by(data1$Sepal.Length,group = data1$Species))
+xy$setosa$mad
+data2<-read.table(file = "g:/fungal.txt",header = T)
+data2
+cor(data2$age,data2$clears)
+cor.test(data2$age,data2$clears)
+data2$severity<-factor(data2$severity)
+attach(data2)
+print(t<-table(treat,sex))
+chisq.test(t)
+fisher.test(t)
+#odds ratio=(success/failure),1 means success=failure, 1< means success is more than failure
+xtabs(~treat+sex+age)
+age
+detach(data2)
+mydata<-read.table("location", header = T, sep = ",",row.names = "idofpatient")
+X~binomial(10,3)
+dbinom(2,10,0.3)
+#P(X=2)
+pbinom(3,10,0.3)
+#P(X<=3)
+pbinom(2,10,0.3)
+#P(X<3)
+1-pbinom(4,10,0.3)
+#P(X>4)
+qbinom(0.5, 10, 0.3)  
+# Binomial Example2 : X ~ binomial(10, 0.3)
+# Find value k such that P(X <= k) = 0.5 
+
+pnorm(z<-(16-20)/sqrt(4),lower.tail = F)
+pnorm(16,20,sqrt(4),lower.tail = F)
+
+pt(-2.15,19)
+pt(-2.15,19,lower.tail = F)
+
+
+pt(1.96,100,lower.tail =F)*2
+pnorm(1.96,lower.tail = F)*2
+pchisq(3.841,1,lower.tail = F)
+pf(2.5,df1 = 2,df2 = 15,lower.tail = F)
+
+
+x<-rnorm(1000,10.06207,sqrt(0.11677))
+
+l<-(x<=9.5)
+l1<-(x>=10.5)
+n<-length(x)
+lp1<-(sum(l1)/n)*100
+lp<-sum(l)/n *100
+
+
+bnx<-c(1:1)
+bny<-c(1:1)
+for(i in 1:1000)
+{
+  if(x[i]<=9.5){
+    c(bnx[i]<-x[i])
+  }
+  if(x[i]>=10.5){
+    c(bny[i]<-x[i])
+  }
+}
+
+(length(bnx<-na.exclude(bnx))/1000)*100
+(length(bny<-na.exclude(bny))/1000)*100
+
+x11<-x[x>=10.5]
+x22<-x[x<=9.5]
+(length(x11)/1000)*100
+(length(x22)/1000)*100
+
+
+x
+
+data("mtcars")
+attach(mtcars)
+ls()
+head(mtcars,3)
+mtcars
+nrow(mtcars)
+sample(1:32,10,replace = F)
+#First avoid the missings and then sampling
+ndat<-mtcars[sample(1:32,10,replace = F),]
+data(iris)
+boxplot(iris[,1])
+boxplot(iris[,1]~iris[,5])
+par(mfrow=c(2,2))
+boxplot(iris[,2]~iris[,5])
+for(i in 1:4)
+{
+  boxplot(iris[,i]~iris[,5])
+}
+
+bmp("g:/test.bmp")
+par(mfrow=c(2,2))
+for(i in 1:4)
+{
+  boxplot(iris[,i]~iris[,5])
+}
+dev.off()
+#for graphical files
+par(mfrow=c(1,1))
+mpg
+l<-lm(mpg~disp+hp)
+l<-lm(mpg~-1+disp+hp)
+summary(l)
+vcov(l)
+v<-diag(vcov(l))
+sqrt(v)
+coefficients(l)
+confint(l,level = 0.95)
+fitted(l)
+residuals(l)
+anova(l)
+l$fitted
+l$residuals
+rss<-var(l$fitted.values)*31
+#computer by deafault n-1 kore
+ess<-var(l$residuals)*31
+tss<-ess+rss
+help(package=rattle)
+rattle()
+install.packages("https://cran.r-project.org/bin/windows/contrib/3.3/RGtk2_2.20.31.zip", repos=NULL)
+library(Rcmdr)
+
+m<- matrix(c(150,50,240,60),2,2)
+print(t<-table(data2$X1,data2$X2))
+chisq.test(m)
+ banknote
+library(rattle)
+rattle()
+install.packages("mclust")
+banknote
+write.table(banknote,file='d:/banknote.csv',sep=",")
+
+m_factor<-factor(m_vector,ordered = T, levels = c("low","medium","high"))
+
+cost_2014<-c(8.6,8.5,8.1)
+
+cost_2014>8.3
+cost_2014[cost_2014>8.3]
+
+movie_vector<-c("Naimul", "Hasan","Helal","New")
+movie_array<- array(movie_vector,dim=c(4,3))
+movie<-list(name="Toy Story",
+            year=1995,
+            genre=c("Animation","Adventure","Comedy")
+)
+movies<-data.frame(name=c("Naimul", "Hasan","Helal","New"),
+                   year=c(1001:1004))
+movies['length']<-c(12,51,31,41)
+movies<rbind(movies, c(name="md",year=45,length=96))
+movies["length"]<-NULL
+
+%in% #Found in
+myFunction<-function(){
+  y<<-3.14
+  temp<-'Hello Nsimul'
+  return(temp)
+
+}
+#Here y is an global variable
+age<-c(120,15,61,45)
+integer_age<-as.integer(age)
+
+tryCatch(
+  for(i in 1:3)
+  {
+    print(i+'a')
+  }
+  , error = function(e){
+    print("Found Error.")
+  }
+)
+
+tryCatch(
+  as.integer("A"),
+  warning= function(e){
+    print("Warning")
+  }
+)
+
+read.csv("location")
+install.packages("readxl")
+library(readxl)
+install.packages("xlsx")
+library(xlsx)
+read_excel("location")
+data()#to see all the datasets
+text<-readLines("location")#by line
+text<-scan("location", "")#by word
+nchar(text)
+file.size("location") #in bytes
+
+hw<-c("Hello","Naimul")
+paste(hw, collapse = " ")
+#for concat strings
+
+as.Date("2020-01-01")
+
+m<- matrix(c(1:6),2,3)
+write(m, file = "location.txt", ncolumns = 3, sep = " ")
+write.csv(df, file= "location.csv", row.names = F)
+write.table(df, file = "location.csv",row.names = F, col.names = F, sep = ",")
+
+write.xlsx(df, file = "location.xlsx", sheetName = "Sheet1", col.names = T, row.names = F)
+
+save()
+toupper()
+tolower()
+chartr("a","_",summary1[1])
+#here "a" will be replaced by "_" from first summary1 line
+
+char_list<- strsplit(summary1[1]," ")
+word_list<- unlist(char_list)
+
+sub_string<- substr(summary1[1], start = 4, stop = 50)
+trimws(sub_string)
+
+library(stringr)
+str_sub(summary1[1],-8,-1)
+
+actors.birthday<-as.POSIXct(bestActors$Date.of.Birth, origin="1970-01-01")
+actors.birthday<-as.Date(actors.birthday)
+#From all seconds to the date format conversion
+actors.birthday<- as.Date(bestActors$Date.of.Birth,"%Y/%m/%d")
+#from factors to date conversion
+
+as.Date("1999/06/27")-as.Date("1959/01/01")
+#date operations
+as.Date("1999/06/27")-14
+Sys.Date()# can do seq or other operations
+Sys.time()
+date()
+grep("@.*",c("afafa@eresf.com","sefaf@asfaf.com","fea@afaf.com"), value = T)
+grep("@.+",c("afafa@eresf.com","sefaf@asfaf.com","fea@afaf.com","ad@"), value = T)
+grep(".+@.*",c("afafa@eresf.com","sefaf@asfaf.com","fea@afaf.com"), value = T)
+
+gsub("@.*","@yahoo.com",c("afafa@eresf.com","sefaf@asfaf.com","fea@afaf.com"))
+
+matches<-regexpr("@.*\\.",email_df[,'Email'])
+email_df[,'Domain']=regmatches(email_df[,'Email'], matches)
+
+install.packages("SparkR")
+
+saveRDS(df1, file = "location.Rda")
+df2<-readRDS("location.Rda")
+#SIngle Object File
+
+save(df1, df2, file="multi.Rda")
+OR
+save(list=c("df1","df2"), file="multi.Rda") 
+load("multi.Rda")
+#Multiple Object File
+
+save.image("all.Rda")
+load("all.Rda")
+# for all data structures in the workspace
+
+
+library(foreign)
+dtx<-read.dta(file = "d:/BDHS14.dta",convert.factors = T)
+View(dtx)
+adtx<-attributes(dtx)
+adtx$var.labels
+library(DMwR)
+install.packages("DMwR")
+dtx2<-dtx[,c(1,5)]
+View(dtx2)
+length(dtx2[dtx2$bmi>=9998,2])
+length(dtx2[,2])
+dtx2[dtx2$bmi>=5000 & dtx2$bmi<=6000,2]
+dtx2[dtx2$bmi>=4000 & dtx2$bmi<=5000,2]
+dvsn<-summary(dtx$division)
+dtx[dtx$bmi>=4000 & dtx$bmi<=6000 & dtx$division=="Sylhet",5]
+dtx1<-dtx[dtx$bmi<9998,]
+View(dtx1)
+dvsn1<-summary(dtx1$division)
+sampledtx1<-dtx1[sample(1:nrow(dtx1),nrow(dtx1)*.2,replace=F),]
+summary(sampledtx1$division)
+rm(sampledtx1)
+View(dtx2)
+dtx2<-dtx1[order(dtx1$division),]
+dvsn<-levels(factor(dtx2$division))
+
+sp <- split(dtx2, list(factor(dtx2$division)))
+samples <- lapply(sp, function(x) x[sample(1:nrow(x), nrow(x)*.20, FALSE),])
+sdtx2 <- do.call(rbind, samples)
+View(sdtx2)
+summary(sdtx2$division)
+#Stratified Sampling
+summary(dtx2$division)
+
+
+for(i in 1:7)
+{
+  c(s_d[i]<-sd(dtx2[dtx2$division==dvsn[i],5])) 
+  c(mn[i]<-mean(dtx2[dtx2$division==dvsn[i],5]))
+}
+mn<-c(10,12)
+s_d<-c(14,16)
+mn
+s_d
+install.packages('car')
+library(car)
+dtx2$bmicat<-recode(dtx2$bmi,"1000:1849='underweight';1850:2299='Normal'; else='Overweight'")
+tdtx2<-table(dtx2$bmicat,dtx2$plor)
+chisq.test(tdtx2)
+barplot(tdtx2,xlab="Urban or Rural",ylab = "Body Mass Index",
+        col=c("green","blue","yellow"),
+        legend.text = T,
+        args.legend = list(x=8,y=1600))
+tdtx2
+bd<-dtx2
+attach(bd)
+boxplot(age, data = bd, main= "Box plot of age",xlab="From data BDHS in 2014",ylab="Age", cex=1, cex.main=1.5, cex.lab=2.0, cex.axis=1.5, col=3, col.main=2, col.lab=4, col.axis=9)
+count<-table(religion)
+barplot(count, main= "Bar plot of religion",xlab="Several Religion",ylab="Number of people", cex=1, cex.main=1.5, cex.lab=2.0, cex.axis=1.5, col=3, col.main=2, col.lab=4, col.axis=9)
+box()
+x<-table(division)
+pie(x, data = bd, main= "Pie diagram of several division",cex=1, cex.main=1.5, cex.lab=2.0, cex.axis=1.5, col=3, col.main=2, col.lab=4, col.axis=9)
+box()
+hist(bmi,main= "Histogram of bmi",xlab=" Body Mass Index",ylab="Frequency", cex=1, cex.main=1.5, cex.lab=2.0, cex.axis=1.5, col=3, col.main=2, col.lab=4, col.axis=9)
+box()
+boxplot(age~division, data = bd, main= "Box plot of several division",xlab="Divisions",ylab="Age", cex=1, cex.main=1.5, cex.lab=2.0, cex.axis=1.5, col=3, col.main=2, col.lab=4, col.axis=9)
+box()
+
+cor(age, bmi)
+
+plot(age, bmi,main= "Corelation Between ",xlab="Divisions",ylab="Age", cex=1, cex.main=1.5, cex.lab=2.0, cex.axis=1.5, col=3, col.main=2, col.lab=4, col.axis=9)
+
+mod <- lm(bmi~age)
+summary(mod)
+plot(mod)
+write.csv(dtx,"d:/bdhs.csv")
+write.table(dtx,"d:/bdhs.csv",sep=",")
+install.packages("Hmisc")
+library(Hmisc)
+install.packages("setRNG")
+library("setRNG")
+rng(0,'twister')
+a=5
+b=500
+y=a*randn(1000,1)+b
+
+rnorm2 <- function(n,mean,sd) { mean+sd*scale(rnorm(n)) }
+r <- rnorm2(100,0,2)
+mean(r)
+sd(r)   
+x[x>=10]
+sum(x[x>=10])
+
+s<-12;u<-5;s%%u#Modoulus
+s<-20;u<-3;s%/%u#Integer Division
+
+r2<-rnorm(100,0,2)
+print(meansd(r2))
+
+r1<-2*scale(rnorm(100))
+
+y<-cut(x2,5)
+y
+y<-x2
+y
+
+banknote
+vif(banknote)
+help(vif)
+library("Hmisc")
+install.packages("fmsb")
+library("fmsb")
+
+
+for(i in 1:10)
+{
+  x<-rnorm(25)
+  print(t.test(x))
+}
+meannn<-function(x,n)
+{
+  sum((1/(n-1))*(x-mean(x))^2)
+}
+x<-c(1:10)
+meannn(x,10)

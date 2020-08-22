@@ -1,0 +1,52 @@
+
+Hello, and welcome!
+In this video, we?re going to show you how to create a Radar Chart using the R programming
+language.
+In order to implement a radar chart, we're going to have to use a few libraries.
+ggplot2 is a library that allows you to create highly-customizable, aesthetically pleasing
+visualizations.
+ggradar allows you to create radar charts.
+The dplyr library provides the pipe operation.
+A pipe operation essentially takes the output from one function and provides it to another.
+And the scales library provides methods for labeling axes and legends.
+Make sure to install these libraries using the 'install.packages' method if you haven't
+already done so.
+Then pass the library names to the 'library' function in order to load them and use them
+in your code.
+The dataset that we are going to work with is called mtcars, which stands for Motor Trend
+Car Road Tests.
+This is a built-in dataset that contains data from the 1974 Motor Trend US magazine.
+In total there are 32 automobiles in the dataset from 1973 to 1974.
+For each automobile, there are 11 variables in the dataset, including fuel consumption.
+Since the dataset is built-in to the R programming language, you don't need to import anything.
+Simply reference the name 'mtcars' in the R code to access the data.
+Radar charts are a way to display multivariate data within one plot.
+They are circular plots with spokes that represent an axis for each variable.
+So it's a good way to see how different objects compare across several different variables.
+This could be used to compare different car types, or it could even be used by a company
+to visualize and analyze several marketing and investment strategies.
+Let's take a closer look at the car example, which displays information about three different
+car types.
+Each car type has its own color on the graph, making them easy to differentiate.
+Points closer to the edge of the radar represent higher values.
+So the 'Mazda RX4 Wag' has the largest weight according to the 'wt' variable, while the
+'Datsun 710' has the best 'miles per gallon' value according to the 'mpg' variable.
+Now we're ready to create a radar chart using the mtcars dataset.
+The symbol with a 'right angle bracket between two percent signs' is the pipe operator.
+So in this code we're applying several operations in sequence.
+After adding row names and assigning each car name to the related variables, we select
+the values that we want to plot on our graph.
+The 'ggradar' function is responsible for plotting our newly created 'mtcars_radar'
+variable.
+The code will generate several warnings, so we've added the 'options' method with the
+parameter 'warn = -1' in order to suppress them.
+You can see that we've produced the radar chart from before.
+But the output is a bit too small, so to enlarge the plot, we can use 'IRKernel' from devtools.
+This allows us to specify the precise width and height that we need.
+The new output is much larger, so it should be easier to visualize the details of the
+plot.
+By now, you should understand that a radar chart can be used to quickly visualize multiple
+variables in a single image.
+You should also know how to construct a radar chart using the R programming language and
+a few external libraries.
+Thank you for watching this video.

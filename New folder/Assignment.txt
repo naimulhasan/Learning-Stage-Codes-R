@@ -1,0 +1,74 @@
+library(foreign)
+dtx<-read.dta(file = "d:/BDHS14.dta",convert.factors = T)
+View(dtx)
+adtx<-attributes(dtx)
+adtx$var.labels
+library(DMwR)
+install.packages("DMwR")
+dtx2<-dtx[,c(1,5)]
+View(dtx2)
+length(dtx2[dtx2$bmi>=9998,2])
+length(dtx2[,2])
+dtx2[dtx2$bmi>=5000 & dtx2$bmi<=6000,2]
+dtx2[dtx2$bmi>=4000 & dtx2$bmi<=5000,2]
+dvsn<-summary(dtx$division)
+dtx[dtx$bmi>=4000 & dtx$bmi<=6000 & dtx$division=="Sylhet",5]
+dtx1<-dtx[dtx$bmi<9998,]
+View(dtx1)
+dvsn1<-summary(dtx1$division)
+sampledtx1<-dtx1[sample(1:nrow(dtx1),nrow(dtx1)*.2,replace=F),]
+summary(sampledtx1$division)
+rm(sampledtx1)
+View(dtx2)
+dtx2<-dtx1[order(dtx1$division),]
+dvsn<-levels(factor(dtx2$division))
+
+sp <- split(dtx2, list(factor(dtx2$division)))
+samples <- lapply(sp, function(x) x[sample(1:nrow(x), nrow(x)*.20, FALSE),])
+sdtx2 <- do.call(rbind, samples)
+View(sdtx2)
+summary(sdtx2$division)
+#Stratified Sampling
+summary(dtx2$division)
+
+
+for(i in 1:7)
+{
+  c(s_d[i]<-sd(dtx2[dtx2$division==dvsn[i],5])) 
+  c(mn[i]<-mean(dtx2[dtx2$division==dvsn[i],5]))
+}
+mn<-c(10,12)
+s_d<-c(14,16)
+mn
+s_d
+install.packages('car')
+library(car)
+dtx2$bmicat<-recode(dtx2$bmi,"1000:1849='underweight';1850:2299='Normal'; else='Overweight'")
+tdtx2<-table(dtx2$bmicat,dtx2$plor)
+chisq.test(tdtx2)
+barplot(tdtx2,xlab="Urban or Rural",ylab = "Body Mass Index",
+        col=c("green","blue","yellow"),
+        legend.text = T,
+        args.legend = list(x=8,y=1600))
+tdtx2
+bd<-dtx2
+attach(bd)
+boxplot(age, data = bd, main= "Box plot of age",xlab="From data BDHS in 2014",ylab="Age", cex=1, cex.main=1.5, cex.lab=2.0, cex.axis=1.5, col=3, col.main=2, col.lab=4, col.axis=9)
+count<-table(religion)
+barplot(count, main= "Bar plot of religion",xlab="Several Religion",ylab="Number of people", cex=1, cex.main=1.5, cex.lab=2.0, cex.axis=1.5, col=3, col.main=2, col.lab=4, col.axis=9)
+box()
+x<-table(division)
+pie(x, data = bd, main= "Pie diagram of several division",cex=1, cex.main=1.5, cex.lab=2.0, cex.axis=1.5, col=3, col.main=2, col.lab=4, col.axis=9)
+box()
+hist(bmi,main= "Histogram of bmi",xlab=" Body Mass Index",ylab="Frequency", cex=1, cex.main=1.5, cex.lab=2.0, cex.axis=1.5, col=3, col.main=2, col.lab=4, col.axis=9)
+box()
+boxplot(age~division, data = bd, main= "Box plot of several division",xlab="Divisions",ylab="Age", cex=1, cex.main=1.5, cex.lab=2.0, cex.axis=1.5, col=3, col.main=2, col.lab=4, col.axis=9)
+box()
+
+cor(age, bmi)
+
+plot(age, bmi,main= "Corelation Between ",xlab="Divisions",ylab="Age", cex=1, cex.main=1.5, cex.lab=2.0, cex.axis=1.5, col=3, col.main=2, col.lab=4, col.axis=9)
+
+mod <- lm(bmi~age)
+summary(mod)
+plot(mod)
